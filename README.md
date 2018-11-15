@@ -2,7 +2,7 @@
 [Online Demo](http://sauravtom.com/hello-world-ethereum-blockchain/)
 1. `git clone https://github.com/sauravtom/hello-world-ethereum-blockchain.git`
 
-2. `cd ethereum-hello-world`
+2. `cd hello-world-ethereum-blockchain`
 
 3. Setup metamask for your browser using [this guide](https://medium.com/@followcoin/how-to-install-metamask-88cbdabc1d28)
 

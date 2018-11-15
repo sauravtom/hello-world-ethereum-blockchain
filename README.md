@@ -11,7 +11,7 @@
 5. Make sure you're Metamask account is connected to the Roposten network
 ![alt text](https://raw.githubusercontent.com/sauravtom/hello-world-ethereum-blockchain/master/demo-images/1.png)
 
-6. Copy the content of `Hello.sol` to [online Remix IDE].(http://remix.ethereum.org) Follow [this guide](https://media.readthedocs.org/pdf/remix/latest/remix.pdf) to learn more about Remix IDE
+6. Copy the content of `Hello.sol` to [online Remix IDE.](http://remix.ethereum.org) Follow [this guide](https://media.readthedocs.org/pdf/remix/latest/remix.pdf) to learn more about Remix IDE
 
 7. On remix, compile and deploy the smart contract to Roposten Network
 

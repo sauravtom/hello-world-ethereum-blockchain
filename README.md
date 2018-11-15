@@ -1,6 +1,6 @@
 # Hello World DApp on Ethereum Blockchain
 [Online Demo](http://sauravtom.com/hello-world-ethereum-blockchain/)
-1. `git clone`
+1. `git clone https://github.com/sauravtom/hello-world-ethereum-blockchain.git`
 
 2. `cd ethereum-hello-world`
 

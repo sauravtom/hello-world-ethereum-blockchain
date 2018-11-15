@@ -29,10 +29,14 @@
 
 
 using python
+
+
 `python -m SimpleHTTPServer` 
 
 
 or node
+
+
 `npm install http-server -g`
 `http-server`
 

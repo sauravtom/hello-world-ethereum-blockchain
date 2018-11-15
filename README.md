@@ -1,12 +1,38 @@
 # Hello World DApp on Ethereum Blockchain
-
+[Online Demo](http://sauravtom.com/hello-world-ethereum-blockchain/)
 1. `git clone`
+
 2. `cd ethereum-hello-world`
-3. Copy the content of `Hello.sol` to [remix ide](http://remix.ethereum.org)
-4. On remix, compile and deploy the smart contract to Roposten Network
-5. Copy the smart contract address and the abi json to index.js file 
-6. Start a local web server to serve the `index.html` file
-7. `python -m SimpleHTTPServer` 
-or
-7. `npm install http-server -g; http-server`
+
+3. Setup metamask for your browser using [this guide](https://medium.com/@followcoin/how-to-install-metamask-88cbdabc1d28)
+
+4. Get some test ethers from the [roposten faucet](https://faucet.metamask.io/)
+
+5. Make sure you're Metamask account is connected to the Roposten network
+![alt text](https://raw.githubusercontent.com/sauravtom/hello-world-ethereum-blockchain/master/demo-images/1.png)
+
+6. Copy the content of `Hello.sol` to [online Remix IDE].(http://remix.ethereum.org) Follow [this guide](https://media.readthedocs.org/pdf/remix/latest/remix.pdf) to learn more about Remix IDE
+
+7. On remix, compile and deploy the smart contract to Roposten Network
+
+⋅⋅⋅Compile the smart contract `Hello.sol` from the Compile tab ![alt text](https://raw.githubusercontent.com/sauravtom/hello-world-ethereum-blockchain/master/demo-images/5.png)
+
+⋅⋅⋅Deploy the smart contract from the Run tab, after selected the correct environment as shown ![alt text](https://raw.githubusercontent.com/sauravtom/hello-world-ethereum-blockchain/master/demo-images/2.png)
+
+8. Copy the smart contract address ![alt text](https://raw.githubusercontent.com/sauravtom/hello-world-ethereum-blockchain/master/demo-images/4.png)
+
+9. Copy the smart contract abi json ![alt text](https://raw.githubusercontent.com/sauravtom/hello-world-ethereum-blockchain/master/demo-images/3.png)
+
+10. Paste the smart contract address and the abi json to the `index.js` file (Use https://jsonformatter.org/ to flatten the abi json object for code cleanliness)
+
+9. Save your changes and start a local web server to serve the `index.html` file
+
+
+using python
+`python -m SimpleHTTPServer` 
+
+
+or node
+`npm install http-server -g`
+`http-server`
 

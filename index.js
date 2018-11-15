@@ -1,9 +1,9 @@
 
 // address of your smart contract deployed on the blockchain
-var smartContractAddress = "";
+var smartContractAddress = "0xf097087536799ca7eacd32466f5bbd00745cee35";
 
 // ABI is a JSON formatted list of contract's function and arguments required to create the EVM bytecode required to call the function
-var abi = [];
+var abi = [{"constant":false,"inputs":[{"name":"newMessage","type":"string"}],"name":"update","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"inputs":[{"name":"initMessage","type":"string"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"constant":true,"inputs":[],"name":"message","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"updateX","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"pure","type":"function"}];
 
 var myAccount;
 var web3;

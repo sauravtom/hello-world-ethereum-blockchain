@@ -13,15 +13,15 @@
 
 6. Copy the content of `Hello.sol` to [online Remix IDE.](http://remix.ethereum.org) Follow [this guide](https://media.readthedocs.org/pdf/remix/latest/remix.pdf) to learn more about Remix IDE
 
-7. On remix, compile and deploy the smart contract to Roposten Network
+7. Inside remix, compile and deploy the smart contract to Roposten Network
 
 ⋅⋅⋅Compile the smart contract `Hello.sol` from the Compile tab ![alt text](https://raw.githubusercontent.com/sauravtom/hello-world-ethereum-blockchain/master/demo-images/5.png)
 
-⋅⋅⋅Deploy the smart contract from the Run tab, after selected the correct environment as shown ![alt text](https://raw.githubusercontent.com/sauravtom/hello-world-ethereum-blockchain/master/demo-images/2.png)
+⋅⋅⋅Deploy the smart contract from the Run tab, after selecting the correct environment as shown ![alt text](https://raw.githubusercontent.com/sauravtom/hello-world-ethereum-blockchain/master/demo-images/2.png)
 
-8. Copy the smart contract address ![alt text](https://raw.githubusercontent.com/sauravtom/hello-world-ethereum-blockchain/master/demo-images/4.png)
+8. Copy the smart contract address to clipboard ![alt text](https://raw.githubusercontent.com/sauravtom/hello-world-ethereum-blockchain/master/demo-images/4.png)
 
-9. Copy the smart contract abi json ![alt text](https://raw.githubusercontent.com/sauravtom/hello-world-ethereum-blockchain/master/demo-images/3.png)
+9. Copy the smart contract abi json to clipboard ![alt text](https://raw.githubusercontent.com/sauravtom/hello-world-ethereum-blockchain/master/demo-images/3.png)
 
 10. Paste the smart contract address and the abi json to the `index.js` file (Use https://jsonformatter.org/ to flatten the abi json object for code cleanliness)
 

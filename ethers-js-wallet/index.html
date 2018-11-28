@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+    <title>Blockchain Hello World Blockchain</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+        body {
+            background-color: #f0f0f2;
+            margin: 0;
+            padding: 0;
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            
+        }
+        div {
+            width: 600px;
+            margin: 5em auto;
+            padding: 50px;
+            background-color: #fff;
+            border-radius: 1em;
+        }
+        a:link, a:visited {
+            color: #38488f;
+            text-decoration: none;
+        }
+        @media (max-width: 700px) {
+            body {
+                background-color: #fff;
+            }
+            div {
+                width: auto;
+                margin: 0 auto;
+                border-radius: 0;
+                padding: 1em;
+            }
+        }
+    </style>    
+</head>
+
+<body>
+<div>
+    <h1>Blockchain Demo using Ethers.js</h1><br>
+
+    <span>
+        <p id="message"></p>
+        <button onclick="refreshMessageValue()">Refresh message value</button>
+    </span>
+    <br><br><hr><br><br>
+    <span>
+        <input id="value" type="text" placeholder="enter new message value here" style="width:200px" />
+        <button onclick="updateMessageValue()">Update message value</button>
+    </span>
+
+</div>
+</body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- <script src="https://cdn.ethers.io/scripts/ethers-v4.min.js" charset="utf-8" type="text/javascript">
+</script> -->
+<script type="text/javascript" src="ethers.js"></script>
+
+<script type="text/javascript">
+    var contract;
+    var wallet;
+    var provider;
+    var contractWithSigner;
+
+    $(document).ready(function() {
+        initContract();
+        refreshMessageValue();
+    })
+
+    function initContract() {
+        let address = "0x03b6b93cf23f04a32aa94fe1ef96cae383900ea7";
+
+        let abi = [
+            {
+                "constant": false,
+                "inputs": [
+                    {
+                        "name": "newMessage",
+                        "type": "string"
+                    }
+                ],
+                "name": "update",
+                "outputs": [],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "name": "initMessage",
+                        "type": "string"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "constructor"
+            },
+            {
+                "constant": true,
+                "inputs": [],
+                "name": "message",
+                "outputs": [
+                    {
+                        "name": "",
+                        "type": "string"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            }
+        ]
+        provider = ethers.getDefaultProvider('ropsten');
+        let privateKey = '...';
+        wallet = new ethers.Wallet(privateKey, provider);
+        contract = new ethers.Contract(address, abi, wallet);
+    }
+
+    async function updateMessageValue() {
+        msgString = document.getElementById("value").value;
+        if(!msgString){
+          return window.alert("MESSAGE VALUE IS EMPTY");
+        }
+        let tx = await contract.update(msgString);
+        console.log(tx);
+    }
+
+    async function refreshMessageValue() {
+        let value = await contract.message();
+        document.getElementById("message").innerText=value;
+    }
+
+</script>
+
+</html>

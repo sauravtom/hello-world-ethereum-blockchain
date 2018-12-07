@@ -40,7 +40,7 @@
 
 <body>
 <div>
-    <h1>Blockchain Demo using Ethers.js</h1><br>
+    <h1>Blockchain Demo using Ethers.js (without metamask)</h1><br>
 
     <span>
         <p id="message"></p>
@@ -115,8 +115,10 @@
             }
         ]
         provider = ethers.getDefaultProvider('ropsten');
-        let privateKey = '...';
-        wallet = new ethers.Wallet(privateKey, provider);
+        //let privateKey = '...';
+        //wallet = new ethers.Wallet(privateKey, provider);
+        wallet = ethers.Wallet.createRandom();
+        wallet = wallet.connect(provider);
         contract = new ethers.Contract(address, abi, wallet);
     }
 
